@@ -85,6 +85,7 @@
 
 .hero__eyebrow {
     margin-bottom: 1rem;
+   color: var(--color-text-soft);
 }
 
 
@@ -101,6 +102,7 @@
 
     line-height: 0.85;
     letter-spacing: -0.035em;
+   color: var(--color-text);
 }
 
 
@@ -122,7 +124,7 @@
 ================================= */
 
 .hero__location {
-    color: var(--color-text);
+    color: var(--color-text-soft);
 
     font-size: var(--text-sm);
     line-height: 1.5;
@@ -142,6 +144,7 @@
 
     letter-spacing: 0.14em;
     text-transform: uppercase;
+   color: var(--color-text-soft);
 }
 
 .hero__scroll-line {
