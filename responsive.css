@@ -1,10 +1,8 @@
 /* =================================
    RESPONSIVE STYLES
 ================================= */
-
-
 /* =================================
-   TABLET & MOBILE
+   TABLET
 ================================= */
 
 @media (max-width: 900px) {
@@ -18,8 +16,76 @@
         display: flex;
     }
 
-    .mobile-nav {
-        display: flex;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    /* ==============================
+       HERO
+    ============================== */
+
+    .hero {
+        min-height: 100svh;
+        height: 100svh;
+
+        align-items: flex-end;
+    }
+
+
+    .hero__media img {
+        object-position: center center;
+    }
+
+
+    .hero__content {
+        padding-bottom: 2.5rem;
+    }
+
+
+    .hero__eyebrow {
+        margin-bottom: 0.75rem;
+
+        font-size: 0.65rem;
+    }
+
+
+    .hero__title {
+        max-width: 100%;
+
+        font-size: clamp(
+            3.5rem,
+            16vw,
+            5.5rem
+        );
+
+        line-height: 0.88;
+    }
+
+
+    .hero__footer {
+        align-items: flex-end;
+
+        margin-top: 2rem;
+    }
+
+
+    .hero__location {
+        font-size: 0.75rem;
+    }
+
+
+    .hero__scroll {
+        font-size: 0.65rem;
+    }
+
+
+    .hero__scroll-line {
+        width: 2rem;
     }
 
 }
