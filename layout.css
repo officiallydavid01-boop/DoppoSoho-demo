@@ -1,0 +1,69 @@
+/* =================================
+   CONTAINER
+================================= */
+
+.container {
+    width: min(
+        100% - (var(--container-padding) * 2),
+        var(--container-width)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* =================================
+   SECTION
+================================= */
+
+.section {
+    position: relative;
+    padding-block: var(--section-gap);
+}
+
+
+/* =================================
+   FULL WIDTH
+================================= */
+
+.full-width {
+    width: 100%;
+}
+
+
+/* =================================
+   GRID
+================================= */
+
+.grid {
+    display: grid;
+    gap: var(--grid-gap);
+}
+
+
+/* =================================
+   FLEX
+================================= */
+
+.flex {
+    display: flex;
+}
+
+
+/* =================================
+   CENTER
+================================= */
+
+.center {
+    display: grid;
+    place-items: center;
+}
+
+
+/* =================================
+   OVERFLOW
+================================= */
+
+.overflow-hidden {
+    overflow: hidden;
+}
