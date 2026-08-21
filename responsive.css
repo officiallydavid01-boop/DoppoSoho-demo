@@ -1,0 +1,21 @@
+/* =================================
+   RESPONSIVE STYLES
+================================= */
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+    .main-nav,
+    .header-booking {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+}
