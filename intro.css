@@ -1,0 +1,126 @@
+/* =================================
+   INTRODUCTION
+================================= */
+
+.intro {
+    padding-block: var(--section-gap);
+
+    background-color: var(--color-bg);
+}
+
+
+/* =================================
+   INTRO GRID
+================================= */
+
+.intro__grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 2fr;
+
+    gap: var(--grid-gap);
+
+    align-items: start;
+}
+
+
+/* =================================
+   LABEL
+================================= */
+
+.intro__label {
+    padding-top: 0.5rem;
+
+    color: var(--color-text-muted);
+
+    font-size: var(--text-xs);
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+/* =================================
+   CONTENT
+================================= */
+
+.intro__content {
+    max-width: 850px;
+}
+
+
+/* =================================
+   STATEMENT
+================================= */
+
+.intro__statement {
+    margin-bottom: 2.5rem;
+
+    color: var(--color-text);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(
+        2.8rem,
+        5vw,
+        5.5rem
+    );
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* =================================
+   DESCRIPTION
+================================= */
+
+.intro__description {
+    max-width: 600px;
+
+    margin-bottom: 2rem;
+
+    font-size: var(--text-base);
+
+    line-height: 1.8;
+}
+
+
+/* =================================
+   LINK
+================================= */
+
+.intro__link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    color: var(--color-text);
+
+    font-size: var(--text-xs);
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+.intro__link-line {
+    width: 2.5rem;
+    height: 1px;
+
+    background-color: currentColor;
+
+    transition:
+        width var(--transition-normal);
+}
+
+.intro__link:hover .intro__link-line {
+    width: 4rem;
+}
