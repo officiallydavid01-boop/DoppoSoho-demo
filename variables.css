@@ -1,14 +1,18 @@
 :root{
-  /*=======colors=========*/
-  --color-bg: #141311;
-    --color-surface: #1c1a17;
+  /* ================================
+   COLORS
+================================ */
 
-    --color-text: #f1ede4;
-    --color-text-muted: #aaa49a;
+--color-bg: #141311;
+--color-surface: #1c1a17;
 
-    --color-accent: #6f2f32;
+--color-text: #E8E0D4;
+--color-text-soft: #C9C0B3;
+--color-text-muted: #AAA49A;
 
-    --color-border: rgba(241, 237, 228, 0.15);
+--color-accent: #6F2F32;
+
+--color-border: rgba(232, 224, 212, 0.15);
 
 
     /* ================================
