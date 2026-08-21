@@ -170,3 +170,159 @@
 .menu-icon::after {
     top: 6px;
   }
+/* =================================
+   MOBILE NAVIGATION
+================================= */
+
+.mobile-nav {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+
+    display: flex;
+
+    background-color: var(--color-bg);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-100%);
+
+    transition:
+        opacity var(--transition-normal),
+        visibility var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+
+/* =================================
+   OPEN STATE
+================================= */
+
+.mobile-nav.is-open {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* =================================
+   MOBILE NAV INNER
+================================= */
+
+.mobile-nav__inner {
+    width: 100%;
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1.5rem var(--container-padding) 2rem;
+}
+
+
+/* =================================
+   TOP BAR
+================================= */
+
+.mobile-nav__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =================================
+   MOBILE LABEL
+================================= */
+
+.mobile-nav__label {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =================================
+   CLOSE BUTTON
+================================= */
+
+.mobile-nav__close {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    display: grid;
+    place-items: center;
+
+    border: 0;
+    background: transparent;
+
+    font-size: 2rem;
+    font-weight: 300;
+
+    cursor: pointer;
+}
+
+
+/* =================================
+   MOBILE LINKS
+================================= */
+
+.mobile-nav__links {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.mobile-nav__links a {
+    font-family: var(--font-display);
+
+    font-size: clamp(2.5rem, 11vw, 4rem);
+
+    line-height: 0.95;
+
+    transition:
+        opacity var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.mobile-nav__links a:hover {
+    opacity: 0.6;
+    transform: translateX(8px);
+}
+
+
+/* =================================
+   MOBILE BOOKING
+================================= */
+
+.mobile-nav__booking {
+    width: 100%;
+
+    padding: 1rem;
+
+    border: 1px solid var(--color-border);
+
+    text-align: center;
+
+    font-size: var(--text-sm);
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    transition:
+        background-color var(--transition-fast),
+        color var(--transition-fast);
+}
+
+.mobile-nav__booking:hover {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+}
