@@ -24,6 +24,16 @@
 ================================= */
 
 @media (max-width: 600px) {
+   .hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 1.25rem;
+}
+
+.hero__booking {
+    padding: 0.75rem 1.1rem;
+}
 
     /* ==============================
        HERO
