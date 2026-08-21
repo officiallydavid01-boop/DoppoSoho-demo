@@ -117,6 +117,30 @@
 
     margin-top: 2.5rem;
 }
+.hero__booking {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 0.85rem 1.4rem;
+
+    border: 1px solid var(--color-text);
+
+    font-size: var(--text-xs);
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: var(--color-text);
+
+    transition:
+        background-color var(--transition-fast),
+        color var(--transition-fast);
+}
+
+.hero__booking:hover {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+}
 
 
 /* =================================
