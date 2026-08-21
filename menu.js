@@ -1,0 +1,247 @@
+/* =================================
+   DOPPO MENU
+================================= */
+
+const menuItems = {
+
+    antipasti: [
+        {
+            name: "Seasonal Antipasto",
+            description: "Seasonal Italian ingredients, simply prepared.",
+            price: "£00",
+            image: "dish1.jpg"
+        },
+        {
+            name: "House Starter",
+            description: "A selection inspired by the day's ingredients.",
+            price: "£00",
+            image: "dish2.jpg"
+        },
+        {
+            name: "Daily Special",
+            description: "Something different from the kitchen each day.",
+            price: "£00",
+            image: "dish3.jpg"
+        }
+    ],
+
+    pasta: [
+        {
+            name: "Fresh Pasta",
+            description: "Hand-finished pasta with seasonal ingredients.",
+            price: "£00",
+            image: "dish2.jpg"
+        },
+        {
+            name: "House Pasta",
+            description: "Italian pasta made with the day's produce.",
+            price: "£00",
+            image: "dish3.jpg"
+        },
+        {
+            name: "Seasonal Pasta",
+            description: "A changing plate inspired by the season.",
+            price: "£00",
+            image: "dish1.jpg"
+        }
+    ],
+
+    secondi: [
+        {
+            name: "Daily Secondo",
+            description: "A seasonal main from the Doppo kitchen.",
+            price: "£00",
+            image: "dish3.jpg"
+        },
+        {
+            name: "Market Fish",
+            description: "Fresh fish selected according to the day's catch.",
+            price: "£00",
+            image: "dish1.jpg"
+        },
+        {
+            name: "Seasonal Main",
+            description: "Italian cooking built around quality ingredients.",
+            price: "£00",
+            image: "dish2.jpg"
+        }
+    ],
+
+    dolci: [
+        {
+            name: "Tiramisù",
+            description: "A classic Italian finish.",
+            price: "£00",
+            image: "dish1.jpg"
+        },
+        {
+            name: "Seasonal Dolce",
+            description: "Something sweet from the kitchen.",
+            price: "£00",
+            image: "dish3.jpg"
+        },
+        {
+            name: "Daily Dessert",
+            description: "A changing final course.",
+            price: "£00",
+            image: "dish2.jpg"
+        }
+    ]
+
+};
+/* =================================
+   MENU ELEMENTS
+================================= */
+
+const categoryButtons =
+    document.querySelectorAll(".menu-category");
+
+const menuGrid =
+    document.querySelector(".menu-grid");
+/* =================================
+   RENDER MENU
+================================= */
+
+function renderMenu(category) {
+
+    const dishes = menuItems[category];
+
+    if (!dishes || !menuGrid) return;
+
+
+    menuGrid.classList.add("is-changing");
+
+
+    setTimeout(() => {
+
+        menuGrid.innerHTML = dishes
+            .map((dish, index) => {
+
+                const sizeClass =
+                    index === 0
+                        ? "menu-card menu-card--large"
+                        : "menu-card";
+
+                return `
+
+                    <article
+                        class="${sizeClass}"
+                    >
+
+                        <a
+                            href="#"
+                            class="menu-card__image"
+                            aria-label="View ${dish.name}"
+                        >
+
+                            <img
+                                src="${dish.image}"
+                                alt="${dish.name}"
+                                loading="lazy"
+                            >
+
+                            <span
+                                class="menu-card__view"
+                            >
+                                View
+                            </span>
+
+                        </a>
+
+
+                        <div
+                            class="menu-card__content"
+                        >
+
+                            <div>
+
+                                <h3
+                                    class="menu-card__name"
+                                >
+                                    ${dish.name}
+                                </h3>
+
+                                <p
+                                    class="menu-card__description"
+                                >
+                                    ${dish.description}
+                                </p>
+
+                            </div>
+
+                            <span
+                                class="menu-card__price"
+                            >
+                                ${dish.price}
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                `;
+
+            })
+            .join("");
+
+
+        menuGrid.classList.remove(
+            "is-changing"
+        );
+
+    }, 250);
+
+}
+/* =================================
+   CATEGORY SWITCHING
+================================= */
+
+categoryButtons.forEach((button) => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            categoryButtons.forEach(
+                (item) => {
+
+                    item.classList.remove(
+                        "is-active"
+                    );
+
+                    item.setAttribute(
+                        "aria-selected",
+                        "false"
+                    );
+
+                }
+            );
+
+
+            button.classList.add(
+                "is-active"
+            );
+
+            button.setAttribute(
+                "aria-selected",
+                "true"
+            );
+
+
+            const category =
+                button.textContent
+                    .trim()
+                    .toLowerCase();
+
+
+            renderMenu(category);
+
+        }
+    );
+
+});
+/* =================================
+   INITIAL MENU
+================================= */
+
+renderMenu("antipasti");
