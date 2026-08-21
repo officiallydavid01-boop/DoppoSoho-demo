@@ -200,12 +200,7 @@
 
 
     .menu-card__view {
-        width: 3.5rem;
-        height: 3.5rem;
-
-        opacity: 1;
-
-        transform: none;
+    display: none;
     }
 
 
