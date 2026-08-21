@@ -73,8 +73,9 @@
     position: relative;
 
     width: 100%;
-
-    padding-bottom: clamp(3rem, 8vw, 7rem);
+   padding-top: 9rem;
+    
+    padding-bottom: clamp(3rem, 6vw, 5rem);
 }
 
 
@@ -92,10 +93,10 @@
 ================================= */
 
 .hero__title {
-    max-width: 950px;
+    max-width: 850px;
 
     font-family: var(--font-display);
-    font-size: clamp(4rem, 10vw, 9rem);
+    font-size: clamp(3.5rem, 7vw, 7rem);
     font-weight: 500;
 
     line-height: 0.85;
