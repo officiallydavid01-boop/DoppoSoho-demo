@@ -155,3 +155,19 @@
 .menu-card__image:hover img {
     transform: scale(1.04);
 }
+/* =================================
+   CATEGORY TRANSITION
+================================= */
+
+.menu-grid {
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.menu-grid.is-changing {
+    opacity: 0;
+
+    transform: translateY(12px);
+}
+
