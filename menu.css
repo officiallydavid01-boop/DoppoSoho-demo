@@ -195,17 +195,16 @@
 .menu-grid {
     display: grid;
 
-    grid-template-columns:
-        1.15fr 0.85fr;
+    grid-template-columns: 1.15fr 0.85fr;
 
-    max-width: 1100px;
+    max-width: 1050px;
 
     margin-inline: auto;
 
     gap: clamp(
-        2rem,
-        4vw,
-        4rem
+        3rem,
+        7vw,
+        7rem
     );
 
     align-items: start;
@@ -235,10 +234,17 @@
 
     overflow: hidden;
 
-    aspect-ratio: 5 / 6;
+    aspect-ratio: 4 / 5;
 
     background-color:
         var(--color-surface);
+}
+.menu-card:nth-child(2) {
+    margin-top: 5rem;
+}
+
+.menu-card:nth-child(3) {
+    margin-top: -2rem;
 }
 
 .menu-card--large
