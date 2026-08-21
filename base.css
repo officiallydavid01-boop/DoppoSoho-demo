@@ -4,3 +4,59 @@
   padding: 0;
   box_sizing: border-box;
 }
+/* =================================
+   DOCUMENT
+================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+
+/* =================================
+   MEDIA
+================================= */
+
+img,
+video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* =================================
+   LINKS
+================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =================================
+   BUTTONS
+================================= */
+
+button {
+    font: inherit;
+    color: inherit;
+}
+
+
+/* =================================
+   LISTS
+================================= */
+
+ul,
+ol {
+    list-style: none;
+}
