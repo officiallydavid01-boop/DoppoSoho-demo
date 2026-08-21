@@ -1,3 +1,74 @@
 :root{
   /*=======colors=========*/
+  --color-bg: #141311;
+    --color-surface: #1c1a17;
+
+    --color-text: #f1ede4;
+    --color-text-muted: #aaa49a;
+
+    --color-accent: #6f2f32;
+
+    --color-border: rgba(241, 237, 228, 0.15);
+
+
+    /* ================================
+       TYPOGRAPHY
+    ================================= */
+
+    --font-display: serif;
+    --font-body: sans-serif;
+
+
+    /* ================================
+       FONT SIZES
+    ================================= */
+
+    --text-xs: 0.7rem;
+    --text-sm: 0.85rem;
+    --text-base: 1rem;
+    --text-lg: 1.25rem;
+
+    --text-xl: 2rem;
+    --text-2xl: 3rem;
+
+    --text-hero: clamp(4rem, 12vw, 10rem);
+
+
+    /* ================================
+       SPACING
+    ================================= */
+
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+
+
+    /* ================================
+       LAYOUT
+    ================================= */
+
+    --container-width: 1400px;
+
+    --section-padding: clamp(5rem, 10vw, 10rem);
+
+
+    /* ================================
+       BORDERS & SHAPES
+    ================================= */
+
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 8px;
+
+
+    /* ================================
+       MOTION
+    ================================= */
+
+    --transition-fast: 200ms ease;
+    --transition-normal: 400ms ease;
+    --transition-slow: 800ms ease;
+}
   
