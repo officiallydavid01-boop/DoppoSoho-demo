@@ -1,0 +1,425 @@
+/* =================================
+   MENU SECTION
+================================= */
+
+.menu-section {
+    padding-block: var(--section-gap);
+
+    background-color: var(--color-bg);
+}
+
+
+/* =================================
+   MENU HEADER
+================================= */
+
+.menu-section__header {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    margin-bottom: 4rem;
+}
+
+
+/* =================================
+   EYEBROW
+================================= */
+
+.menu-section__eyebrow {
+    margin-bottom: 0.75rem;
+
+    color: var(--color-text-muted);
+
+    font-size: var(--text-xs);
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+/* =================================
+   TITLE
+================================= */
+
+.menu-section__title {
+    color: var(--color-text);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(
+        3.5rem,
+        7vw,
+        7rem
+    );
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.035em;
+}
+
+
+/* =================================
+   HEADER LINK
+================================= */
+
+.menu-section__link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+    padding-bottom: 0.35rem;
+
+    border-bottom: 1px solid
+        var(--color-border);
+
+    color: var(--color-text-soft);
+
+    font-size: var(--text-xs);
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+.menu-section__link-line {
+    width: 2rem;
+    height: 1px;
+
+    background-color: currentColor;
+
+    transition:
+        width var(--transition-normal);
+}
+
+.menu-section__link:hover
+.menu-section__link-line {
+    width: 3.5rem;
+}
+
+
+/* =================================
+   CATEGORIES
+================================= */
+
+.menu-categories {
+    display: flex;
+
+    align-items: center;
+
+    gap: 2rem;
+
+    margin-bottom: 3rem;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+.menu-categories::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =================================
+   CATEGORY BUTTON
+================================= */
+
+.menu-category {
+    position: relative;
+
+    flex: 0 0 auto;
+
+    padding: 0 0 0.75rem;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--color-text-muted);
+
+    font-family: var(--font-body);
+
+    font-size: var(--text-xs);
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.menu-category::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 1px;
+
+    background-color:
+        var(--color-text);
+
+    transition:
+        width var(--transition-normal);
+}
+
+.menu-category.is-active {
+    color: var(--color-text);
+}
+
+.menu-category.is-active::after {
+    width: 100%;
+}
+
+
+/* =================================
+   MENU GRID
+================================= */
+
+.menu-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.35fr 0.8fr;
+
+    gap: clamp(
+        2rem,
+        5vw,
+        6rem
+    );
+
+    align-items: start;
+}
+
+
+/* =================================
+   MENU CARD
+================================= */
+
+.menu-card {
+    min-width: 0;
+}
+
+.menu-card--large {
+    grid-row: span 2;
+}
+
+
+/* =================================
+   CARD IMAGE
+================================= */
+
+.menu-card__image {
+    position: relative;
+
+    display: block;
+
+    overflow: hidden;
+
+    aspect-ratio: 4 / 5;
+
+    background-color:
+        var(--color-surface);
+}
+
+.menu-card--large
+.menu-card__image {
+    aspect-ratio: 4 / 5;
+}
+
+.menu-card__image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.8s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+}
+
+
+/* =================================
+   IMAGE HOVER
+================================= */
+
+.menu-card__image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =================================
+   VIEW LABEL
+================================= */
+
+.menu-card__view {
+    position: absolute;
+
+    right: 1.25rem;
+    bottom: 1.25rem;
+
+    display: grid;
+
+    place-items: center;
+
+    width: 4rem;
+    height: 4rem;
+
+    border-radius: 50%;
+
+    background-color:
+        var(--color-text);
+
+    color: var(--color-bg);
+
+    font-size: var(--text-xs);
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    opacity: 0;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.menu-card__image:hover
+.menu-card__view {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =================================
+   CARD CONTENT
+================================= */
+
+.menu-card__content {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding-top: 1.25rem;
+}
+
+
+/* =================================
+   DISH NAME
+================================= */
+
+.menu-card__name {
+    margin-bottom: 0.5rem;
+
+    color: var(--color-text);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(
+        1.5rem,
+        2vw,
+        2.2rem
+    );
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+/* =================================
+   DESCRIPTION
+================================= */
+
+.menu-card__description {
+    max-width: 360px;
+
+    color: var(--color-text-muted);
+
+    font-size: var(--text-sm);
+
+    line-height: 1.6;
+}
+
+
+/* =================================
+   PRICE
+================================= */
+
+.menu-card__price {
+    flex: 0 0 auto;
+
+    color: var(--color-text-soft);
+
+    font-size: var(--text-sm);
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+.menu-section__footer {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 5rem;
+}
+
+
+/* =================================
+   FULL MENU LINK
+================================= */
+
+.menu-section__full-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    color: var(--color-text);
+
+    font-size: var(--text-xs);
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+.menu-section__full-arrow {
+    display: inline-block;
+
+    transition:
+        transform var(--transition-normal);
+}
+
+.menu-section__full-link:hover
+.menu-section__full-arrow {
+    transform: translateX(8px);
+  }
