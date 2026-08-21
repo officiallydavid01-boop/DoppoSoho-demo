@@ -6,3 +6,72 @@ url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;60
 --font-body: "Inter", sans-serrif;
 
 /*======BAse typography======*/
+body {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 400;
+}
+
+
+/* =================================
+   HEADINGS
+================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+
+/* =================================
+   DISPLAY
+================================= */
+
+.display-text {
+    font-family: var(--font-display);
+    font-size: var(--text-hero);
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+}
+
+
+/* =================================
+   BODY
+================================= */
+
+p {
+    font-size: var(--text-base);
+    line-height: 1.7;
+    color: var(--color-text-muted);
+}
+
+
+/* =================================
+   SMALL LABELS
+================================= */
+
+.eyebrow {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+
+/* =================================
+   LINKS
+================================= */
+
+.text-link {
+    font-size: var(--text-sm);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
