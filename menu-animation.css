@@ -156,18 +156,73 @@
     transform: scale(1.04);
 }
 /* =================================
-   CATEGORY TRANSITION
+   MENU CATEGORY TRANSITION
 ================================= */
 
 .menu-grid {
     transition:
-        opacity 0.25s ease,
-        transform 0.25s ease;
+        opacity 0.35s ease,
+        transform 0.35s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
 }
 
 .menu-grid.is-changing {
     opacity: 0;
 
-    transform: translateY(12px);
+    transform:
+        translateY(18px);
 }
 
+
+/* =================================
+   NEW DISH REVEAL
+================================= */
+
+.menu-grid:not(.is-changing)
+.menu-card {
+    animation:
+        dishReveal 0.7s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        )
+        both;
+}
+
+
+.menu-grid:not(.is-changing)
+.menu-card:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+
+.menu-grid:not(.is-changing)
+.menu-card:nth-child(3) {
+    animation-delay: 0.16s;
+}
+
+
+@keyframes dishReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
