@@ -4,7 +4,7 @@
 
 
 /* =================================
-   TABLET
+   TABLET & MOBILE
 ================================= */
 
 @media (max-width: 900px) {
@@ -15,6 +15,10 @@
     }
 
     .menu-toggle {
+        display: flex;
+    }
+
+    .mobile-nav {
         display: flex;
     }
 
