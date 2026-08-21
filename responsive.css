@@ -110,6 +110,120 @@
     .hero__scroll {
         font-size: 0.65rem;
     }
+   /* =================================
+   MENU — TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+    .menu-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 2rem;
+    }
+
+    .menu-card--large {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .menu-card--large
+    .menu-card__image {
+        aspect-ratio: 16 / 9;
+    }
+
+}
+
+
+/* =================================
+   MENU — MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .menu-section {
+        padding-block: 5rem;
+    }
+
+
+    .menu-section__header {
+        display: block;
+
+        margin-bottom: 3rem;
+    }
+
+
+    .menu-section__title {
+        font-size: clamp(
+            3.2rem,
+            15vw,
+            5rem
+        );
+    }
+
+
+    .menu-section__link {
+        margin-top: 1.5rem;
+    }
+
+
+    .menu-categories {
+        gap: 1.5rem;
+
+        margin-right: -1rem;
+        padding-right: 1rem;
+
+        margin-bottom: 2.5rem;
+    }
+
+
+    .menu-grid {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 3.5rem;
+    }
+
+
+    .menu-card,
+    .menu-card--large {
+        width: 100%;
+    }
+
+
+    .menu-card__image,
+    .menu-card--large
+    .menu-card__image {
+        aspect-ratio: 4 / 5;
+    }
+
+
+    .menu-card__view {
+        width: 3.5rem;
+        height: 3.5rem;
+
+        opacity: 1;
+
+        transform: none;
+    }
+
+
+    .menu-card__content {
+        gap: 1rem;
+    }
+
+
+    .menu-card__name {
+        font-size: 1.7rem;
+    }
+
+
+    .menu-section__footer {
+        margin-top: 4rem;
+    }
+
+}
 
 
     .hero__scroll-line {
