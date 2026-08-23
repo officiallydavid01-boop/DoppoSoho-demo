@@ -1,0 +1,282 @@
+/* =================================
+   SIGNATURE SECTION
+================================= */
+
+.signature-section {
+    padding-block:
+        clamp(7rem, 12vw, 12rem);
+
+    background-color:
+        var(--color-surface);
+
+    overflow: hidden;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.signature-header {
+    max-width: 1100px;
+
+    margin-inline: auto;
+
+    margin-bottom:
+        clamp(4rem, 8vw, 8rem);
+}
+
+
+.signature-header__label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+    margin-bottom: 1.5rem;
+
+    color:
+        var(--color-text-muted);
+
+    font-size:
+        var(--text-xs);
+
+    letter-spacing:
+        0.14em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.signature-header__line {
+    width: 2rem;
+
+    height: 1px;
+
+    background-color:
+        currentColor;
+}
+
+
+.signature-header__title {
+    max-width: 650px;
+
+    color:
+        var(--color-text);
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        clamp(
+            3rem,
+            6vw,
+            6.5rem
+        );
+
+    font-weight: 500;
+
+    line-height: 0.92;
+
+    letter-spacing:
+        -0.035em;
+}
+
+
+/* =================================
+   FEATURED DISH
+================================= */
+
+.signature-dish {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(280px, 0.6fr);
+
+    align-items: center;
+
+    gap:
+        clamp(
+            3rem,
+            7vw,
+            8rem
+        );
+
+    max-width: 1200px;
+
+    margin-inline: auto;
+}
+
+
+/* =================================
+   IMAGE
+================================= */
+
+.signature-dish__media {
+    position: relative;
+
+    overflow: hidden;
+
+    aspect-ratio: 4 / 5;
+
+    background-color:
+        var(--color-bg);
+}
+
+
+.signature-dish__media img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1.06);
+
+    transition:
+        transform 1.2s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+}
+
+
+.signature-dish__media:hover img {
+    transform: scale(1.02);
+}
+
+
+/* =================================
+   CONTENT
+================================= */
+
+.signature-dish__content {
+    max-width: 400px;
+}
+
+
+.signature-dish__meta {
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    padding-bottom: 1rem;
+
+    margin-bottom: 2rem;
+
+    border-bottom:
+        1px solid
+        var(--color-border);
+
+    color:
+        var(--color-text-muted);
+
+    font-size:
+        var(--text-xs);
+
+    letter-spacing:
+        0.1em;
+
+    text-transform:
+        uppercase;
+}
+
+
+/* =================================
+   DISH NAME
+================================= */
+
+.signature-dish__name {
+    margin-bottom: 1.5rem;
+
+    color:
+        var(--color-text);
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        clamp(
+            2rem,
+            3vw,
+            3.5rem
+        );
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing:
+        -0.025em;
+}
+
+
+/* =================================
+   DESCRIPTION
+================================= */
+
+.signature-dish__description {
+    max-width: 340px;
+
+    margin-bottom: 2.5rem;
+
+    color:
+        var(--color-text-muted);
+
+    font-size:
+        var(--text-sm);
+
+    line-height: 1.8;
+}
+
+
+/* =================================
+   LINK
+================================= */
+
+.signature-dish__link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    padding-bottom:
+        0.5rem;
+
+    border-bottom:
+        1px solid
+        var(--color-border);
+
+    color:
+        var(--color-text);
+
+    font-size:
+        var(--text-xs);
+
+    letter-spacing:
+        0.12em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.signature-dish__link span:last-child {
+    transition:
+        transform
+        var(--transition-normal);
+}
+
+
+.signature-dish__link:hover
+span:last-child {
+    transform:
+        translateX(8px);
+  }
