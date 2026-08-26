@@ -1,0 +1,94 @@
+/* =================================
+   STORY REVEAL
+================================= */
+
+.story-heading,
+.story-media,
+.story-content {
+
+    opacity: 0;
+
+    transform:
+        translateY(45px);
+
+}
+
+
+/* =================================
+   VISIBLE STATE
+================================= */
+
+.story-section.is-visible
+.story-heading {
+
+    animation:
+        storyFadeUp
+        1s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        )
+        forwards;
+
+}
+
+
+.story-section.is-visible
+.story-media {
+
+    animation:
+        storyFadeUp
+        1.1s
+        0.15s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        )
+        forwards;
+
+}
+
+
+.story-section.is-visible
+.story-content {
+
+    animation:
+        storyFadeUp
+        1s
+        0.3s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        )
+        forwards;
+
+}
+
+
+@keyframes storyFadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(45px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
