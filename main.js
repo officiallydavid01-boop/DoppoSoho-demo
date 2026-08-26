@@ -89,3 +89,54 @@ if (signatureSection) {
     );
 
 }
+/* =================================
+   STORY REVEAL
+================================= */
+
+const storySection =
+    document.querySelector(
+        ".story-section"
+    );
+
+
+if (storySection) {
+
+    const storyObserver =
+        new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach(
+                    (entry) => {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            storySection
+                                .classList
+                                .add(
+                                    "is-visible"
+                                );
+
+                            storyObserver
+                                .unobserve(
+                                    storySection
+                                );
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+
+    storyObserver.observe(
+        storySection
+    );
+
+}
