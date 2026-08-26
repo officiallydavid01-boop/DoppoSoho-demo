@@ -226,3 +226,66 @@
     }
 
 }
+/* =================================
+   SIGNATURE — TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+    .signature-dish {
+        grid-template-columns:
+            1fr;
+
+        gap: 3rem;
+    }
+
+
+    .signature-dish__content {
+        max-width: 600px;
+    }
+
+}
+
+
+/* =================================
+   SIGNATURE — MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .signature-section {
+        padding-block: 6rem;
+    }
+
+
+    .signature-header {
+        margin-bottom: 3.5rem;
+    }
+
+
+    .signature-header__title {
+        font-size:
+            clamp(
+                2.8rem,
+                13vw,
+                4.5rem
+            );
+    }
+
+
+    .signature-dish {
+        gap: 2.5rem;
+    }
+
+
+    .signature-dish__media {
+        aspect-ratio: 4 / 5;
+    }
+
+
+    .signature-dish__name {
+        font-size: 2.2rem;
+    }
+
+}
+
