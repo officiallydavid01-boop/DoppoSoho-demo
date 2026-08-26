@@ -288,4 +288,107 @@
     }
 
 }
+/* =================================
+   STORY — TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+    .story-layout {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 3rem;
+
+    }
+
+
+    .story-heading {
+
+        padding-top: 0;
+
+    }
+
+
+    .story-media {
+
+        grid-column: 2;
+
+        grid-row:
+            1 / span 2;
+
+    }
+
+
+    .story-content {
+
+        margin-top: 3rem;
+
+    }
+
+}
+
+
+/* =================================
+   STORY — MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .story-section {
+
+        padding-block: 6rem;
+
+    }
+
+
+    .story-layout {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 3rem;
+
+    }
+
+
+    .story-heading {
+
+        padding-top: 0;
+
+    }
+
+
+    .story-title {
+
+        font-size:
+            clamp(
+                2.8rem,
+                13vw,
+                4.5rem
+            );
+
+    }
+
+
+    .story-media {
+
+        width: 88%;
+
+        margin-left: auto;
+
+        aspect-ratio: 4 / 5;
+
+    }
+
+
+    .story-content {
+
+        margin-top: 0;
+
+    }
+
+}
 
